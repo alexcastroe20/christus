@@ -7,6 +7,7 @@
   <title>Connect 2025</title>
   <meta name="description" content="Connect 2025">
   <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -176,6 +177,23 @@
         .boton-strong:hover {
             background-color: #0b3748;
             box-shadow: none;
+        }
+        @media only screen and (max-width: 767px) {
+            .half-connect {
+                width: 100%;
+                max-width: 100%;
+            } 
+            .flx-third-small, .flx-third {
+                width: 100%;
+                margin: 15px auto;
+                min-height: 260px;
+            }
+            .bg-img-three, .bg-img-two, .bg-img-one {
+                height: 400px;
+            }  
+            footer .right, footer .left {
+                float: none;
+            }
         }
     </style>
 
