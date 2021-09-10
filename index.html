@@ -42,6 +42,9 @@
         .bg-stronger {
             background-color: #1D4A5A;
         }
+        .bg-new-color {
+            background-color: #ccdbdf;
+        }
         h1, h2, h3, h4, h5, h6 {
             margin-top: 0;
             font-weight: 600;
@@ -182,6 +185,11 @@
             box-shadow: none;
             
         }
+        video {
+            border-radius: 5px;
+            width: 80%;
+            margin: auto;
+        }
         @media only screen and (max-width: 767px) {
             .half-connect {
                 width: 100%;
@@ -232,10 +240,13 @@
         </div>
     </section>
     <section>
-        <div class="half-connect bg-img-one">
-
+        <div class="half-connect bg-new-color" style="min-height: 700px; display: inline-flex; align-items: center;">
+            <video controls data-aos="zoom-in-up" poster="portada.png">
+              <source src="https://acastroe20.s3.amazonaws.com/CONNECT+2025.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
         </div>
-        <div class="half-connect" data-aos="zoom-in-up">
+        <div class="half-connect" data-aos="zoom-in-up" data-aos-delay="200">
             <div class="half-container">
                 <h4>Acerca de</h4>
                 <h1>Connect 2025</h1>    
