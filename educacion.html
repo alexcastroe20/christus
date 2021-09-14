@@ -1,0 +1,334 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Educación</title>
+  <meta name="description" content="Educación">
+  <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+
+    <style>
+        
+        * {
+            font-family: 'Inter';
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-weight: 400 !important;
+            overflow-x: hidden;
+        }
+        p, ul, ol, label {
+            font-size: 14px;
+            line-height: 1.5em;
+            
+        }
+        .bg-strong {
+            background-color: #662275; 
+            color: white;
+        }
+        .bg-light {
+            background-color: #F3E5F5;
+        }
+        .bg-stronger {
+            background-color: #1D4A5A;
+        }
+        .bg-new-color {
+            background-color: #FEF8FF;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            font-weight: 600;
+            color: #5E486B;
+        }
+        .bg-strong h1, .bg-strong h2, .bg-strong h3, .bg-strong h4, .bg-strong h5, .bg-strong h6 {
+            color: white;
+        }
+        p, ul, ol {
+            color: #99839A;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        h4 {
+            margin:0;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 0.18em;
+            color: #662275;
+        }
+        .bg-strong p {
+            color: white;
+        }
+        
+        .half-connect {
+            width: 49.5%;
+            max-width: 49.5%;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 30px;
+        }
+        .half-container {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        strong {
+            color: #662275;
+            font-weight: 500;
+        }
+        .main-container {
+            max-width: 1310px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        footer {
+            padding: 50px 30px;
+        }
+        footer * {
+            font-size: 11px !important;
+        }
+        .flex-container {
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+            margin: 100px 0;
+        }
+        .flex-container-cards {
+            justify-content: space-around;
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 100px 0;
+        }
+        .flx-third {
+            width: 30%;
+        }
+        .flx-third-small {
+            width: 23%;
+        }
+        .centrado-christus {
+            text-align: center;
+        }
+        .card-christus {
+            padding: 35px 40px;
+            border-radius: 40px;
+            box-shadow: 0px 0px 40px rgba(0, 0, 0, .17);
+            text-align: center;
+        }
+        .card-christus p
+        {
+            opacity: 0.5;
+        }
+        .bg-img-one {
+            background-image: url("arbol.jpg");
+            height: 700px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+       .bg-img-two {
+            background-image: url("familia.jpg");
+            height: 700px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+       .bg-img-three {
+            background-image: url("ni%C3%B1a.jpg");
+            height: 700px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        footer .left {
+            float: left;
+        }
+        footer .right {
+            float: right;
+        }
+        .circular-container {
+            padding: 30px;
+            background-color: #276278; 
+            border-radius: 100%;
+        }
+        .image-full {
+            width: 100%;
+        }
+        .hgt80 {
+            min-height: 80vh;
+        }
+        .boton-strong {
+            padding: 13px 35px;
+            color: white;
+            background-color: #55C6A6; 
+            width: fit-content;
+            border-radius: 5px;
+            font-size: 13px;
+            text-decoration: none;
+            box-shadow: 0px 0px 20px 0px #55C6A6b5;
+            display: block;
+            transition: all 0.5s ease;
+        }
+        .boton-strong:hover {
+            background-color: #0b3748;
+            box-shadow: none;
+            
+        }
+        video {
+            border-radius: 5px;
+            width: 80%;
+            margin: auto;
+        }
+        .evento {
+            background-color: #FEF8FF;
+            border-radius: 5px;
+            overflow: hidden;
+            display: inline-flex;
+            width: 80%;
+            align-items: center;
+            margin-bottom: 10px;
+            box-shadow: 0px 3px 35px rgba(0, 0, 0, .16);
+        }
+        .evento-fecha {
+            padding: 20px;
+            color: white;
+            background-color: #662275;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .evento-nombre {
+            color: #99839A;
+            padding: 20px;
+            font-size: 13px;
+        }
+        @media only screen and (max-width: 767px) {
+            .half-connect {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            } 
+            .flx-third-small, .flx-third {
+                width: 100%;
+                margin: 15px auto;
+                min-height: 260px;
+            }
+            .bg-img-three, .bg-img-two, .bg-img-one {
+                height: 400px;
+            }  
+            footer .right, footer .left {
+                float: none;
+            }
+            .reverse-mobile {
+                display: inline-flex;
+                flex-wrap: wrap-reverse;
+            }
+            .half-container {
+                max-width: 100%;
+            }
+            .card-christus {
+                text-align: left;
+            }
+            .centrado-christus {
+                text-align: left;
+            }
+        }
+    </style>
+
+    
+</head>
+<body>
+
+    <section class="bg-light hgt80">
+        <div class="main-container reverse-mobile">
+            <div class="half-connect" data-aos="zoom-in-up" data-aos-delay="400">
+                <div class=""><img src="Recurso 1.png" class="image-full"></div>
+            </div>
+            <div class="half-connect">
+                <h1>Próximos Eventos</h1>
+                <p>Da click en el evento al que desees inscribirte, y serás redirigido a un formulario de registro.</p>
+                <div class="events-container">
+                    <div class="evento"><div class="evento-fecha">28 Sept</div><div class="evento-nombre">Capacitación Ejemplo</div></div>
+                    <div class="evento"><div class="evento-fecha">28 Sept</div><div class="evento-nombre">Capacitación Ejemplo</div></div>
+                    <div class="evento"><div class="evento-fecha">28 Sept</div><div class="evento-nombre">Capacitación Ejemplo</div></div>
+                
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="half-connect bg-new-color" style="min-height: 700px; display: inline-flex; align-items: center; padding: 10em;">
+            <img src="undraw_studying_s3l7.svg" class="image-full">
+        </div>
+        <div class="half-connect" data-aos="zoom-in-up" data-aos-delay="200">
+            <div class="half-container">
+                <h4>BIBLIOTECA DE VIDEOS</h4>
+                <h1>Capacitación RE25</h1>    
+            <video controls data-aos="zoom-in-up">
+              <source src="https://acastroe20.s3.amazonaws.com/CONNECT+2025.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            </div>
+        </div>
+    </section>
+    <section class="reverse-mobile">
+
+        <div class="half-connect">
+            <div class="half-container" data-aos="zoom-in-up">
+                <h4>Biblioteca de Videos</h4>
+                <h1>Aprendiendo con Muguerza</h1>
+            <video controls data-aos="zoom-in-up">
+              <source src="https://acastroe20.s3.amazonaws.com/CONNECT+2025.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            </div>
+        </div>
+        <div class="half-connect bg-new-color" style="min-height: 700px; display: inline-flex; align-items: center; padding: 10em;">
+            <img src="undraw_book_lover_mkck.svg" class="image-full">
+        </div>
+    
+    </section>
+    <section>
+        <div class="half-connect bg-new-color" style="min-height: 700px; display: inline-flex; align-items: center; padding: 10em;">
+            <img src="undraw_Scrum_board_re_wk7v.svg" class="image-full">
+        </div>
+        <div class="half-connect">
+            <div class="half-container" data-aos="zoom-in-up">
+                <h4>Biblioteca de Videos</h4>
+                <h1>Talleres/Ponencias</h1>
+            <video controls data-aos="zoom-in-up">
+              <source src="https://acastroe20.s3.amazonaws.com/CONNECT+2025.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            </div>
+        </div>
+
+    </section>
+    <footer class="bg-strong">
+        <div class="main-container">
+            <div class="left">
+                <p>© 2021 | Derechos reservados RE25</p>  
+            </div>
+            <div class="right">
+                <p>Aprende Más | Términos de Uso</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
