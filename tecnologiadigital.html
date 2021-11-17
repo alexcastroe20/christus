@@ -1,0 +1,366 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Grupos de enfoque | Tecnología Digital</title>
+  <meta name="description" content="Voz del consumidor">
+  <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+
+    <style>
+        
+        * {
+            font-family: 'Inter';
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-weight: 400 !important;
+            overflow-x: hidden;
+        }
+        p, ul, ol, label {
+            font-size: 14px;
+            line-height: 1.5em;
+            
+        }
+        .bg-strong {
+            background-color: #662275; 
+            color: white;
+        }
+        .bg-light {
+            background-color: #F3E5F5;
+        }
+        .bg-stronger {
+            background-color: #1D4A5A;
+        }
+        .bg-new-color {
+            background-color: #FEFCFF;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            font-weight: 600;
+            color: #5E486B;
+        }
+        .bg-strong h1, .bg-strong h2, .bg-strong h3, .bg-strong h4, .bg-strong h5, .bg-strong h6 {
+            color: white;
+        }
+        p, ul, ol {
+            color: #99839A;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        h4 {
+            margin:0;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 0.18em;
+            color: #662275;
+        }
+        .bg-strong p {
+            color: white;
+        }
+        
+        .half-connect {
+            width: 49.5%;
+            max-width: 49.5%;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 30px;
+        }
+        .half-container {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        strong {
+            color: #662275;
+            font-weight: 500;
+        }
+        .main-container {
+            max-width: 1310px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        footer {
+            padding: 50px 30px;
+        }
+        footer * {
+            font-size: 11px !important;
+        }
+        .flex-container {
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .flex-container-cards {
+            justify-content: space-around;
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 100px 0;
+        }
+        .flx-third {
+            width: 30%;
+        }
+        .flx-third-small {
+            width: 23%;
+        }
+        .centrado-christus {
+            text-align: center;
+        }
+
+        .card-christus p
+        {
+            opacity: 0.5;
+        }
+        .bg-img-one {
+            background-image: url("arbol.jpg");
+            height: 700px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+       .bg-img-two {
+            background-image: url("familia.jpg");
+            height: 700px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+       .bg-img-three {
+            background-image: url("ni%C3%B1a.jpg");
+            height: 700px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        footer .left {
+            float: left;
+        }
+        footer .right {
+            float: right;
+        }
+        .image-full {
+            width: 100%;
+        }
+        .hgt80 {
+            min-height: 80vh;
+        }
+        .boton-strong {
+            padding: 13px 35px;
+            color: white;
+            background-color: #662275; 
+            width: fit-content;
+            border-radius: 5px;
+            font-size: 12px;
+            text-decoration: none;
+            box-shadow: 0px 0px 20px 0px #7c1d918f !important;
+            display: block;
+            transition: all 0.5s ease;
+        }
+        .boton-outline {
+            padding: 13px 35px;
+            color: #662275;
+            background-color: transparent; 
+            width: fit-content;
+            border-radius: 5px;
+            border: 1px solid #662275;
+            font-size: 12px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.5s ease;
+        }
+        .boton-strong:hover {
+            background-color: #662275;
+            box-shadow: none;
+            color: white;
+            
+        }
+        .cards-container {
+            width: 100%;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+       .card-christus {
+           width: 450px;
+            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0px 3px 70px rgba(0, 0, 0, .09);
+            text-align: center;
+           margin: auto;
+        }
+        .imagen-card {
+            height: 180px;
+            min-width: 180px;
+            background-color: #F3E5F5;
+            border-radius: 20px
+        }
+        .contenido-card {
+            padding: 0 20px;
+            text-align: left;
+        }
+        .contenido-card p {
+            font-size: 12px;
+        }
+        iframe {
+            border-radius: 20px;
+            max-width: 100%;
+        }
+        hr {
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 100%;
+            border: 0;
+            opacity: 0.2;
+            height: 1px;
+            background-image: linear-gradient(to right, rgb(102 34 117), rgb(102 34 117 / 75%), rgba(0, 0, 0, 0));
+        }
+        .sponsor {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background: gray;
+            opacity: 0.1;
+            margin: 40px auto;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .half-connect {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            } 
+            .flx-third-small, .flx-third {
+                width: 100%;
+                margin: 15px auto;
+                min-height: 260px;
+            }
+            .bg-img-three, .bg-img-two, .bg-img-one {
+                height: 400px;
+            }  
+            footer .right, footer .left {
+                float: none;
+            }
+            .reverse-mobile {
+                display: inline-flex;
+                flex-wrap: wrap-reverse;
+            }
+            .half-container {
+                max-width: 100%;
+            }
+            .card-christus {
+                text-align: left;
+                width: 100%;
+                flex-direction: column;
+            }
+            .contenido-card {
+                padding: 20px 0;
+            }
+            .centrado-christus {
+                text-align: left;
+            }
+            iframe {
+                height: auto;
+            }
+        }
+
+        
+    
+    </style>
+
+    
+</head>
+<body>
+
+    <section class="bg-new-color">
+        <div class="main-container">
+            <div class="half-connect" data-aos="zoom-in-up" data-aos-delay="400">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lWkE9i3SAb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="half-connect">
+                <h1>Tecnología<br>Digital</h1>
+                <div class="flex-container">
+                    <a href="#" class="boton-strong" style="margin-right:10px; margin-bottom: 10px;">Suscribirme</a> 
+                    <a href="#" class="boton-outline" style="margin-bottom: 10px;">Enviar una idea</a> 
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="bg-new-color">
+        <div class="main-container">
+            <div class="half-connect" data-aos="zoom-in-up" data-aos-delay="400">
+                <h3>Objetivo</h3>
+                <p>Adoptar nuevas tecnologías que proporcionen un flujo de información de atención médica continuo, apropiado y coordinado a través de todo el proceso de atención.</p>
+                <hr>
+                <p>En la pasarela digital encontrarás buenas prácticas de Tecnología Digital que puedes replicar en tu unidad.
+                </p>
+                <a href="#" class="boton-strong" style="margin-right:10px;">Ver pasarela digital</a> 
+                <hr>
+                <h3>Equipo</h3>
+                <ul>
+                    <li>Rubén Darío Eloss Soto</li>
+                    <li>Héctor Alonso Sánchez Uvilla</li>
+                    <li>Luz del Carmen Muñoz Hernández</li>
+                    <li>Andrés Omar Nevarez Prieto</li>
+                    <li>Claudia Alicia Krowicki</li>
+                    <li>Alfredo Nacoud Askar</li>
+                </ul>
+            </div>
+            <div class="half-connect" data-aos="zoom-in-up" data-aos-delay="400">
+                <div class="card-christus">
+                    <h3>Sponsor</h3>
+                    <div class="sponsor"></div>
+                    <h3>Jesús David Diaz Garaygordobil </h3>
+                    <p>Ultrices phasellus rhoncus suscipit eros diam netus vehicula duis cubilia, turpis  placerat tellus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="mypanel" style="display: none;">
+             </div>
+
+    </section>
+    <footer class="bg-strong">
+        <div class="main-container">
+            <div class="left">
+                <p>© 2021 | Derechos reservados RE25</p>  
+            </div>
+            <div class="right">
+                <p>Aprende Más | Términos de Uso</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+    $.getJSON('http://r25.pixeco.com.mx/wp-json/wp/v2/tutorial', function(data) {
+        console.log(data);
+        var text = `ID: ${data[0].title.rendered}<br>z<
+                    Registro: ${data[0].meta.event_url}<br>
+                    Fecha: ${data[0].meta.date}`
+                    
+        
+        $(".mypanel").html(text);
+    });
+        
+
+    </script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
